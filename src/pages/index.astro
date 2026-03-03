@@ -1,17 +1,84 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Home" description="Especialistas em engenharia e manutenção predial.">
+    
+    <section class="relative h-[85vh] flex items-center bg-[#0a2540]">
+        <div class="absolute inset-0 opacity-20">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070" alt="Engenharia Predial" class="w-full h-full object-cover" />
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-white w-full">
+            <span class="border border-white/30 text-blue-400 px-4 py-1 rounded-full text-sm font-semibold tracking-wider uppercase mb-6 inline-block">
+                Fazer. Inovar. Solucionar.
+            </span>
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6 max-w-4xl">
+                Excelência em Construção Civil e Manutenção Predial
+            </h1>
+            <p class="text-xl text-gray-300 max-w-2xl mb-10">
+                Construção civil, elétrica, hidráulica e contratos de manutenção predial com rigor técnico e foco na continuidade das suas operações.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#servicos" class="bg-blue-600 text-white px-8 py-4 rounded font-bold hover:bg-blue-700 transition text-center shadow-lg">
+                    Conheça Nossos Serviços
+                </a>
+                <a href="/parceiros" class="border border-white text-white px-8 py-4 rounded font-bold hover:bg-white/10 transition text-center">
+                    Área de Clientes Parceiros
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicos" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-16 text-center md:text-left">
+                <span class="text-[#0a2540] font-bold tracking-wider uppercase text-sm block mb-2">Expertise Técnica</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-[#0a2540]">Nossas Áreas de Atuação</h2>
+                <div class="h-1 w-20 bg-blue-600 mt-4 mx-auto md:mx-0"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-3">Construção Civil</h3>
+                    <p class="text-gray-600 text-sm mb-6">Reformas, adequações de layout e ampliações industriais com rigoroso controle de qualidade e prazos.</p>
+                    <a href="/servicos/construcao-civil" class="text-blue-600 font-bold text-sm group-hover:underline flex items-center">
+                        Saiba mais <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-3">Instalações Elétricas</h3>
+                    <p class="text-gray-600 text-sm mb-6">Montagem de painéis, cabines primárias, laudos NR10 e projetos de eficiência energética.</p>
+                    <a href="/servicos/eletrica" class="text-blue-600 font-bold text-sm group-hover:underline flex items-center">
+                        Saiba mais <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-3">Sistemas Hidráulicos</h3>
+                    <p class="text-gray-600 text-sm mb-6">Redes de água industrial, esgoto, ar comprimido e sistemas completos de combate a incêndio.</p>
+                    <a href="/servicos/hidraulica" class="text-blue-600 font-bold text-sm group-hover:underline flex items-center">
+                        Saiba mais <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-3">Ar Condicionado</h3>
+                    <p class="text-gray-600 text-sm mb-6">Climatização central, elaboração e execução de PMOC para garantir a qualidade do ar e conformidade legal.</p>
+                    <a href="/servicos/ar-condicionado" class="text-blue-600 font-bold text-sm group-hover:underline flex items-center">
+                        Saiba mais <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+
+                <div class="bg-white p-8 rounded border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 group md:col-span-2 lg:col-span-1 bg-blue-50/50 border-blue-100">
+                    <h3 class="text-xl font-bold text-[#0a2540] mb-3">Contratos de Manutenção</h3>
+                    <p class="text-gray-600 text-sm mb-6">Terceirização de equipes técnicas (preventiva e corretiva) para gestão completa e ininterrupta dos seus ativos.</p>
+                    <a href="/servicos/contratos-manutencao" class="text-blue-600 font-bold text-sm group-hover:underline flex items-center">
+                        Saiba mais <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

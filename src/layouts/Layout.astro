@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | MAGSERV Engenharia</title>
+    <meta name="description" content={description} />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-white text-slate-900 font-sans">
+    
+    <header class="fixed w-full bg-white/95 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 h-20 flex justify-between items-center">
+            <img src="src/img/magservLogo.png" alt="MAGSERV LOGO" class="h-12 w-auto"></img>
+            <nav class="hidden md:flex space-x-8 font-semibold text-[#0a2540]">
+                <a href="/" class="hover:text-blue-600 transition">Início</a>
+                <a href="#servicos" class="hover:text-blue-600 transition">Serviços</a>
+                <a href="#clientes" class="hover:text-blue-600 transition">Clientes</a>
+                <a href="/sobre" class="hover:text-blue-600 transition">Sobre</a>
+                <a href="#contato" class="bg-[#0a2540] text-white px-5 py-2 rounded hover:bg-blue-900 transition">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <slot /> 
+    </main>
+
+    <footer class="bg-[#0a2540] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8 border-b border-white/10 pb-8">
+            <div>
+                <span class="text-xl font-bold uppercase">Mag<span class="text-blue-500">Serv</span></span>
+                <p class="text-gray-400 mt-4 text-sm">Soluções integradas em manutenção e engenharia para o setor B2B.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Serviços</h4>
+                <ul class="text-gray-400 text-sm space-y-2">
+                    <li><a href="/servicos/eletrica" class="hover:text-white">Elétrica</a></li>
+                    <li><a href="/servicos/hidraulica" class="hover:text-white">Hidráulica</a></li>
+                    <li><a href="/servicos/ar-condicionado" class="hover:text-white">Ar Condicionado</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Contato</h4>
+                <p class="text-gray-400 text-sm">comercial@magserv.com.br</p>
+                <p class="text-gray-400 text-sm">(41) 99999-9999</p>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-500 text-xs">
+            © 2026 MAGSERV MANUTENÇÃO E SERVIÇOS LTDA. Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+</html>
