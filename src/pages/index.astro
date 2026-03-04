@@ -1,12 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import bgIndex from '../assets/index-bg.jpg';
 ---
 
 <Layout title="Home" description="Especialistas em engenharia e manutenção predial.">
     
     <section class="relative h-[85vh] flex items-center bg-[#0a2540]">
         <div class="absolute inset-0 opacity-20">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2070" alt="Engenharia Predial" class="w-full h-full object-cover" />
+            <Image 
+                src={bgIndex} 
+                alt="Instalações Elétricas" 
+                class="w-full h-full object-cover object-center" 
+                quality="high"
+            />
         </div>
         
         <div class="max-w-7xl mx-auto px-4 relative z-10 text-white w-full">
